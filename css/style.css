@@ -1,0 +1,291 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 62.5%; }
+  @media only screen and (min-width: 37.5em) {
+    html {
+      font-size: 65.625%; } }
+  @media only screen and (min-width: 56.25em) {
+    html {
+      font-size: 68.75%; } }
+  @media only screen and (min-width: 75em) {
+    html {
+      font-size: 71.875%; } }
+
+h1,
+p {
+  margin: 2.5rem 0; }
+
+body {
+  color: #8E8E90; }
+
+header,
+main,
+section,
+.container {
+  padding: 2rem 0; }
+  @media only screen and (min-width: 85.375em) {
+    header,
+    main,
+    section,
+    .container {
+      padding: 0; } }
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400; }
+
+h1 {
+  font-weight: 300; }
+
+@media only screen and (min-width: 85.375em) {
+  p {
+    font-size: 1.8rem; } }
+
+a {
+  font-size: 2rem; }
+  @media only screen and (max-width: 43.75em) {
+    a {
+      font-size: 1.6rem; } }
+  @media only screen and (min-width: 85.375em) {
+    a {
+      font-size: 1.2vw; } }
+
+.font--clr-white {
+  color: #fff; }
+
+.font--clr-primary {
+  color: #F6E66C; }
+
+.banner h1 {
+  text-transform: uppercase; }
+
+.cta__header--large {
+  font-size: 3em;
+  font-weight: 400; }
+
+.cta:nth-of-type(2) h1 {
+  text-transform: uppercase; }
+
+.bg-primary {
+  background-color: #F6E66C; }
+  @media only screen and (min-width: 85.375em) {
+    .bg-primary {
+      background-color: transparent; } }
+
+.split {
+  display: flex;
+  flex-direction: column; }
+  @media only screen and (min-width: 56.25em) {
+    .split {
+      flex-direction: row; }
+      .split > * {
+        flex-basis: 100%; }
+      .split > * + * {
+        margin-left: 1.5em; } }
+  @media only screen and (min-width: 85.375em) {
+    .split {
+      flex-direction: column; }
+      .split > * {
+        flex-basis: auto; }
+      .split > * + * {
+        margin: 0; } }
+
+.vertical--align {
+  display: flex;
+  align-items: center; }
+
+.horizontal--align {
+  display: flex;
+  justify-content: center; }
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.btn {
+  border-radius: 30px;
+  display: inline-block;
+  padding: 1rem 3rem;
+  text-transform: uppercase; }
+  .btn--bordered {
+    border: 3px solid #8E8E90; }
+  .btn--yellow {
+    background-color: #F6E66C; }
+
+.banner {
+  border-top: 5px solid #FEFAE1;
+  border-bottom: 5px solid #FEFAE1;
+  width: 100%;
+  height: 15rem; }
+  @media only screen and (max-width: 37.5em) {
+    .banner {
+      margin-top: 3rem; } }
+  .banner__bg {
+    display: none;
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 0; }
+    @media only screen and (min-width: 85.375em) {
+      .banner__bg {
+        display: initial; } }
+  @media only screen and (min-width: 85.375em) {
+    .banner {
+      height: initial; } }
+  .banner h1::after, .banner h1::before {
+    background-color: #fff;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px; }
+
+.nav {
+  text-transform: uppercase; }
+  @media only screen and (max-width: 37.5em) {
+    .nav {
+      display: none; } }
+  .nav__toggle {
+    display: none;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    background-color: #F6E66C;
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem; }
+    @media only screen and (max-width: 37.5em) {
+      .nav__toggle {
+        display: initial; } }
+  .nav__item {
+    display: inline-block; }
+    .nav__item:not(:last-child) {
+      margin-right: 4rem; }
+    @media only screen and (min-width: 85.375em) {
+      .nav__item:last-child {
+        position: relative; }
+        .nav__item:last-child:before {
+          background-image: url("../images/mb-logo.png");
+          background-size: 5rem 5rem;
+          width: 5rem;
+          height: 5rem;
+          content: "";
+          display: inline-block;
+          position: absolute;
+          bottom: 115%;
+          left: 50%;
+          transform: translateX(-50%); } }
+  @media only screen and (min-width: 85.375em) {
+    .nav {
+      margin-bottom: 5rem; }
+      @supports (display: flex) {
+        .nav {
+          display: flex;
+          justify-content: space-between;
+          align-items: center; } } }
+  .nav__link {
+    position: relative;
+    color: #8E8E90;
+    text-decoration: none; }
+  .nav__btn {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    background-color: #F6E66C;
+    border-radius: 50%;
+    width: 5.5rem;
+    height: 5.5rem; }
+
+.nav__link.active::after {
+  position: absolute;
+  bottom: -7px;
+  left: 0;
+  background-color: #F6E66C;
+  content: '';
+  display: inline-block;
+  width: 100%;
+  height: 3px; }
+
+.sub {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: #F6E66C;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 10; }
+  .sub__nav {
+    list-style: none; }
+    .sub__nav-item:not(:last-child) {
+      margin-bottom: 2rem; }
+    .sub__nav-link {
+      color: #fff;
+      font-size: 3rem;
+      text-decoration: none;
+      text-transform: uppercase; }
+
+header {
+  position: relative;
+  text-align: center; }
+
+.cta {
+  position: relative; }
+  @media only screen and (max-width: 56.25em) {
+    .cta {
+      text-align: center; } }
+  @media only screen and (min-width: 85.375em) {
+    .cta:nth-of-type(2) h1 {
+      text-align: initial;
+      width: 82%;
+      margin-left: auto;
+      margin-top: 10rem;
+      padding-left: 5vw; } }
+  @media only screen and (max-width: 96.875em) {
+    .cta:nth-of-type(2) h1 {
+      font-size: 1.75em; } }
+  @media only screen and (min-width: 56.25em) {
+    .cta:nth-of-type(2) {
+      display: flex;
+      align-items: center;
+      text-align: center; } }
+  .cta__header--vertical {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); }
+    @supports (display: flex) {
+      .cta__header--vertical {
+        position: static;
+        transform: translateY(0); } }
+  .cta__btn {
+    margin-top: 1rem; }
+
+.bg-image {
+  background-image: url("images/mb-bg.png") !important; }
+
+@media only screen and (min-width: 85.375em) {
+  main {
+    display: flex; }
+    main > *:nth-of-type(1) {
+      height: 100vh;
+      margin-right: 2rem; }
+    main > *:nth-of-type(2) {
+      padding-top: 10rem;
+      padding-right: 3vw;
+      margin-left: 2rem; }
+    main > * {
+      flex-basis: 100%; } }
+
+.container {
+  margin-inline: auto;
+  width: 90%;
+  max-width: 118.782rem; }

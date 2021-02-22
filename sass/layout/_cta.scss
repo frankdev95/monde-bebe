@@ -1,0 +1,52 @@
+.cta {
+  position: relative;
+
+  @include respond(tab-port) {
+    text-align: center;
+  }
+
+  &:nth-of-type(2) {
+
+    h1 {
+      @media only screen and (min-width: $bp-standard) {
+        text-align: initial;
+        width: 82%;
+        margin-left: auto;
+        margin-top: 10rem;
+        padding-left: 5vw;
+      }
+
+      @media only screen and(max-width: 96.875em) {
+        font-size: 1.75em;
+      }
+    }
+
+    @media only screen and (min-width: $bp-tab-port) {
+      display: flex;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  &__header {
+
+    &--vertical {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+
+      @supports (display: flex) {
+        position: static;
+        transform: translateY(0);
+      }
+    }
+  }
+
+  &__btn {
+    margin-top: 1rem;
+  }
+}
+
+.bg-image {
+  background-image: url("images/mb-bg.png") !important;
+}

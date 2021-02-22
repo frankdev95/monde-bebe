@@ -1,0 +1,45 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+
+  font-size: 62.5%;
+
+  @media only screen and (min-width: 37.5em) { // 600px
+    font-size: 65.625%;
+  }
+
+  @media only screen and (min-width: 56.25em) { // 900px
+    font-size: 68.75%;
+  }
+
+  @media only screen and (min-width: 75em) { // 1200px
+    font-size: 71.875%;
+  }
+}
+
+h1,
+p {
+  margin: 2.5rem 0;
+}
+
+body {
+  color: $ff-col-primary;
+}
+
+header,
+main,
+section,
+.container {
+  padding: 2rem 0;
+
+  @media only screen and (min-width: $bp-standard) {
+    padding: 0;
+  }
+}
+
